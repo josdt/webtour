@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.8;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #005990;
+}
+
+.header .links {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.showcase {
+  background: url('https://atlantis-cms-assets.s3.us-east-2.amazonaws.com/styled/8f4597e8d337d22501cede98b6b0ecb4')
+    no-repeat center/cover;
+  height: 650px;
+}
+
+.showcase .showcase-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+  text-align: center;
+  color: #fff;
+}
+
+.showcase .showcase-overlay h1 {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.destinations {
+  padding: 50px;
+  text-align: center;
+}
+
+.destinations h3 {
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+}
+.destinations .list-tour p {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.destinations .list-tour {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.destinations .list-tour .grid div {
+  background-color: #f1f1f1;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+
+
+.destinations .list-tour .grid div img {
+  border-radius: 10px;
+  height: 150px;
+  width: 300px;
+}
+
+
+
+
+.modal {
+  font-size: 12px;
+
+}
+.modal .header {
+  width: 100%;
+  color: rgb(255, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  font-size: 18px;
+  background-color: rgb(122, 255, 255);
+  text-align: center;
+  padding: 5px;
+  
+}
+.modal .content {
+  display: flex;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 5px;
+}
+
+.modal .content .infor {
+  padding: 10px 5px;
+  width: 60%;
+}
+.modal .content .booking {
+  padding: 10px 5px;
+  width: 40%;
+}
+
+.modal .content .booking .date {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.modal .content .booking .date p {
+  margin-left: 10px;
+}
+
+.modal .content .booking .service {
+  display: flex;
+  margin-top: 5px;
+}
+
+.modal .content .booking .price p {
+  margin-left: 10px;
+}
+
+.modal .content .booking .price {
+  display: flex;
+  margin-top: 5px;
+}
+
+.modal .content .booking .service p {
+  margin-left: 10px;
+}
+
+.modal .content .booking h2 {
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+}
+.modal .content .booking h3 {
+  color: rgb(255, 0, 0);
+}
+.modal .content .booking p {
+  
+  color: rgb(0, 0, 0);
+}
+.modal .content .booking .number-input {
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+}
+.modal .content .booking .number-input input {
+  margin-left: 10px;
+  color: rgb(0, 0, 0);
+  width: 20%;
+}
+.modal .content .booking .button button {
+  background-color: transparent;
+  color: rgb(175, 0, 0);
+  background-color: #79f4ff;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.modal .content .booking .button {
+text-align: center;
+}
+
+.modal .actions {
+  margin: auto;
+}
+.modal .actions {
+  width: 100%;
+  padding: 10px 5px;
+  text-align: center;
+}
+.modal .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+
+.footer {
+  background-color: #333;
+  padding: 40px;
+}
+
+.footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer ul li {
+  margin: 0 20px;
+}
+
+.footer ul li button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.footer ul li button:hover {
+  background-color: #2c7f86;
+}
+
+/* Login and SignUp */
+.login .form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.login .form-control input {
+  margin: 5px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 80vw;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.login .form-control button {
+  background-color: #2c7f86;
+  padding: 8px;
+  border: 2px solid #2c7f86;
+  color: #fff;
+  font-family: inherit;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.login .form-control button:hover {
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .showcase {
+    background-position: top;
+  }
+
+  .showcase .showcase-overlay h1 {
+    font-size: 64px;
+  }
+
+  .showcase .showcase-overlay p {
+    font-size: 18px;
+  }
+
+ 
+
+  .footer ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .login .form-control input {
+    width: 50vw;
+  }
+
+  .showcase .showcase-overlay .search{
+    display: flex;
+    height: 40px;
+    margin-top: 40px;
+      
+  }
+
+  .showcase .showcase-overlay .search button {
+    background-color: #2c7f86;
+  padding: 4px;
+  border: 2px solid #2c7f86;
+  color: #fff;
+  font-family: inherit;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  margin-left: 20px;
+  }
+ 
+  .showcase .showcase-overlay .search .container {
+    display: flex;
+    align-items: center;
+    
+    
+}
+.showcase .showcase-overlay .search .container label{
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+}
+.showcase .showcase-overlay .search .container input {
+  margin: 5px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 15vw;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+}

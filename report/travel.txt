@@ -1,0 +1,88 @@
+Xác định thực thể:
+
+	tour (tour): mã tour, tiêu đề, hướng dẫn viên, ngày bắt đầu, ngày kết thúc, giá tiền, mô tả, loại tour
+
+	địa điểm thăm quan (place) : mã địa điểm, tên, hình ảnh(lưu đường dẫn vị trí hình ảnh)
+
+	phương tiện (vehicle) : biển số xe, tên, tên tài xế, loại xe (số lượng chỗ ngồi)
+
+	nhân viên (employee) : mã nhân viên, tên, địa chỉ, email, điện thoại (dùng như tên đăng nhập), mật khẩu, quyền (nhân viên hoặc là quản lý)
+
+	khách hàng (customer) : mã khách hàng, tên, giới tính, email, điện thoại (dùng như tên đăng nhập), mật khẩu, trạng thái (tài khoản được hoạt động hoặc tài khản bị khóa)
+
+	dịch vụ (service) : mã dịch vụ, tên dịch vụ
+
+
+Mô hình dữ liệu quan hệ:
+	
+	tour (tour): mã tour, tiêu đề, mã nhân viên (hướng dẫn viên), ngày bắt đầu, ngày kết thúc, giá tiền, mô tả, loại tour
+
+	địa điểm thăm quan (place) : mã địa điểm, tên, hình ảnh(lưu đường dẫn vị trí hình ảnh)
+
+	phương tiện (vehicle) : biển số xe, tên, tên tài xế, loại xe (số lượng chỗ ngồi)
+
+	nhân viên (employee) : mã nhân viên, tên, địa chỉ, email, điện thoại (dùng như tên đăng nhập), mật khẩu, quyền (nhân viên hoặc là quản lý)
+
+	khách hàng (customer) : mã khách hàng, tên, giới tính, email, điện thoại (dùng như tên đăng nhập), mật khẩu, trạng thái (tài khoản được hoạt động hoặc tài khản bị khóa)
+
+	dịch vụ (service) : mã dịch vụ, tên dịch vụ	
+
+	đặt tour(booking) : mã khách hàng, mã tour, ngày đặt, số lượng người thăm quan (số lượng người của 1 booking-1 vé), tổng tiền (số lượng người * giá tiền), đánh giá
+
+	câu hỏi (question): mã khách hàng, mã tour, câu hỏi, câu trả lời
+
+
+-1 tour có 1 hướng dẫn viên- 1 hướng dẫn viên có thể phụ trách nhiều tour khác nhau
+-1 tour có nhiều phương tiện di chuyển- 1 phương tiện có thể chạy nhiều tour
+-1 tour có nhiều địa điểm thăm quan- 1 địa điểm có thể được nhiều tour đến thăm quan
+-1 tour có nhiều dịch vụ- 1 dịch vụ có thể có trong nhiều tour
+
+-1 tour có thể có nhiều khách đặt- 1 khách có thể đặt nhiều tour
+-1 khách hàng có thể đánh giá tour của mình đặt sau khi đã kết thúc tour- 1 tour có thể được nhiều khách hàng đánh giá
+-1 khách hàng có thể đặt câu hỏi ở nhiều tour- 1 tour có thể được nhiều khách hàng đặt câu hỏi
+
+-khách hàng được vào xem danh sách tour, xem chi tiết tour, tìm kiếm tour, lọc tour theo địa điểm, dịch vụ, đăng ký tour, huỷ tour, đặt câu hỏi, đánh giá tour
+-admin được quản lý nhân viên, quản lý khách hàng, quản lý tour, quản lý địa điểm, quản lý phương tiện, lập danh sách khách tham quan, phân hướng dẫn viên, in hoá đơn
+-hướng dẫn viên được xem danh sách tour mà mình phụ trách
+
+
+*Chức năng đặt tour:
+Đăng nhập
+Đăng ký
+Lọc tour
+Tìm kiếm tour
+Hiển thị danh sách tour
+Xem chi tiết tour
+Đặt tour
+Huỷ tour
+Đặt câu hỏi
+Đánh giá tour
+Xem thông tin cá nhân
+Chỉnh sửa thông tin cá nhân
+
+*Chức năng quản lý:
+Đăng nhập
+Xem Thông tin cá nhân
+Quản lý nhân viên
+Quản lý khách hàng
+Quản lý tour
+Phân hướng dẫn viên
+In hoá đơn
+
+
+*Đối tượng:
+Khách hàng:
+Hiển thị danh sách các tour với các thông tin chính để khách hàng dễ dàng tham khảo
+Khách hàng xem thông tin tour, chọn số lượng người, bấm xác nhận để đặt tour
+
+Admin:
+Admin có quyền kiểm soát hệ thống: quản lý nhân viên, quản lý khách hàng, quản lý tour, phân hướng dẫn viên, in hoá đơn
+- Chức năng quản lý nhân viên: thêm, xoá, sửa nhân viên
+- Chức năng quản lý khách hàng: xem danh sách khách hàng, khoá tài khoàn khách hàng
+- Chức năng quản lý tour: xem danh sách tour, thêm tour, phân hướng dẫn viên, lập danh sách khách đặt tour
+
+Hướng dẫn viên:
+Hướng dẫn viên có quyền xem và chỉnh sửa thông tin cá nhân, xem danh sách tour mà mình được phân công
+
+
+
